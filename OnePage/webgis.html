@@ -454,7 +454,7 @@
         url: wmsUrl,
         params: {
           "LAYERS": "gisgeoserver_12:Hungary_no2_concentration_map_2020",
-          "STYLES": "Hungary_no2_concentration_map_2020",
+          "STYLES": "pm2p5_concentration_map_2020",
           "TILED": true
         },
         serverType: "geoserver"
@@ -468,7 +468,7 @@
         url: wmsUrl,
         params: {
           "LAYERS": "gisgeoserver_12:Hungary_pm10_concentration_map_2020",
-          "STYLES": "Hungary_no2_concentration_map_2020",
+          "STYLES": "pm2p5_concentration_map_2020",
           "TILED": true
         },
         serverType: "geoserver"
@@ -482,7 +482,7 @@
         url: wmsUrl,
         params: {
           "LAYERS": "gisgeoserver_12:Hungary_pm2p5_concentration_map_2020",
-          "STYLES": "Hungary_no2_concentration_map_2020",
+          "STYLES": "pm2p5_concentration_map_2020",
           "TILED": true
         },
         serverType: "geoserver"
@@ -616,7 +616,7 @@
     });
 
     const hungaryno2zonalstatistics20132022 = new ol.layer.Tile({
-      title: "NO<sub>2</sub> 2013-2022 Zonal Statistics",
+      title: "Urban 2013-2022 Zonal Statistics",
       visible: true,
       source: new ol.source.TileWMS({
         url: wmsUrl,
@@ -696,9 +696,7 @@
       visible: false,
       fold: "close",
       layers: [
-        hungaryno2zonalstatistics20132022,
-        hungarypm10zonalstatistics20132022,
-        hungarypm25zonalstatistics20132022
+        hungaryno2zonalstatistics20132022
       ]
     });
 
